@@ -3,49 +3,244 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>元素垂直排列</title>
     <style>
         html,
         body {
-      
             margin: 0;
             padding: 0;
         }
 
-        .content {
-            width: 300px;
-            height: 300px;
-            background: orange;
-            margin: 0 auto;
-            /*水平居中*/
-            position: relative;
-            top: 50%;
-            /*偏移*/
-            transform: translateY(-50%);
-        }
-
-        .btn {
-            width: 251px;
-            height: 50px;
-            background: #2A9DD9;
-            border-radius: 25px;
-            font-family: Helvetica;
-            font-size: 20px;
-            color: #FFFFFF;
-            margin: auto 0;
-            position: absolute;
-            top: 0;
-            bottom: 0;
+        hr {
+            width: 100%;
+            height: 5px;
+            margin: 50px 0;
+            background: #000;
         }
     </style>
 </head>
 
 <body>
-    <!-- <div class="content"></div> -->
-    <div style="border: solid 1px; min-height: 135px;">
-        <input type="button" value="Button" class="btn" />
+    <div id="VerticalAlignMiddle1">
+        <style>
+            #VerticalAlignMiddle1 .parent {
+                border: solid 1px #00f;
+                width: 600px;
+                height: 300px;
+                /* 使用 table-cell，就必须给块元素指定宽度（auto，100% 无效），并且 Margin: 0 auto; 无效 */
+                /* margin: 0 auto;  */
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            #VerticalAlignMiddle1 .child {
+                border: solid 1px red;
+                width: 300px;
+                height: 150px;
+                margin: 0 auto;
+            }
+        </style>
+        <h1>块元素垂直居中 1</h1>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <br>
+        <div class="parent">
+            <input type="button" value="Button" />
+        </div>
+        <br>
+        <div class="parent">
+            <img src="dist/Img/AboutUsImg1.jpg" />
+        </div>
     </div>
-    
+
+    <hr />
+
+    <div id="VerticalAlignMiddle2">
+        <style>
+            #VerticalAlignMiddle2 .parent {
+                border: solid 1px #00f;
+                width: auto;
+                height: 300px;
+                display: flex;
+            }
+
+            #VerticalAlignMiddle2 .child {
+                border: solid 1px red;
+                width: 300px;
+                height: 150px;
+                align-self: center;
+                margin: 0 auto;
+            }
+
+            #VerticalAlignMiddle2 a,
+            input,
+            img {
+                align-self: center;
+                margin: 0 auto;
+            }
+        </style>
+        <h1>块元素垂直居中 2</h1>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <br>
+        <div class="parent">
+            <a href="javascript:;">link</a>
+        </div>
+        <br>
+        <div class="parent">
+            <input type="button" value="Button" style="width: 100px; height: 50px;" />
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px;" />
+        </div>
+        <br>
+        <div class="parent">
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px;" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div id="VerticalAlignMiddle3">
+        <style>
+            #VerticalAlignMiddle3 .parent {
+                border: solid 1px #00f;
+                width: auto;
+                height: 300px;
+                display: block;
+            }
+
+            #VerticalAlignMiddle3 .parent:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+                clear: both;
+            }
+
+            #VerticalAlignMiddle3 .child {
+                border: solid 1px red;
+                width: 300px;
+                height: 150px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            #VerticalAlignMiddle3 img {
+                vertical-align: middle;
+            }
+        </style>
+        <h1>块元素垂直居中 3</h1>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <br>
+        <div class="parent">
+            <a href="javascript:;">link</a>
+        </div>
+        <br>
+        <div class="parent">
+            <input type="button" value="Button" style="width: 100px; height: 50px;" />
+        </div>
+        <br>
+        <div class="parent">
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px;" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div id="VerticalAlignMiddle4">
+        <style>
+            #VerticalAlignMiddle4 .parent {
+                border: solid 1px #00f;
+                width: auto;
+                height: 300px;
+            }
+
+            #VerticalAlignMiddle4 .child {
+                border: solid 1px red;
+                width: 300px;
+                height: 150px;
+            }
+
+            #VerticalAlignMiddle4 .child,
+            #VerticalAlignMiddle4 a,
+            #VerticalAlignMiddle4 input,
+            #VerticalAlignMiddle4 img {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        </style>
+        <h1>块元素垂直居中 4</h1>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <br>
+        <div class="parent">
+            <a href="javascript:;">link</a>
+        </div>
+        <br>
+        <div class="parent">
+            <input type="button" value="Button" style="width: 100px; height: 50px; float: left;" />
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px; float: right;" />
+        </div>
+        <br>
+        <div class="parent">
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px;" />
+        </div>
+    </div>
+
+    <hr />
+
+    <div id="VerticalAlignMiddle5">
+        <style>
+            #VerticalAlignMiddle5 .parent {
+                border: solid 1px #00f;
+                width: auto;
+                height: 300px;
+                position: relative;
+                text-align: center;
+            }
+
+            #VerticalAlignMiddle5 .child {
+                border: solid 1px red;
+                width: 300px;
+                height: 150px;
+            }
+
+            #VerticalAlignMiddle5 .child,
+            #VerticalAlignMiddle5 a,
+            #VerticalAlignMiddle5 input,
+            #VerticalAlignMiddle5 img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+            
+        </style>
+        <h1>块元素垂直居中 5</h1>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <br>
+        <div class="parent">
+            <a href="javascript:;">link</a>
+        </div>
+        <br>
+        <div class="parent">
+            <!-- float 无效-->
+            <input type="button" value="Button" style="width: 100px; height: 50px; float: left; z-index: 1000;" /> 
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px; float: right;" />
+        </div>
+        <br>
+        <div class="parent">
+            <img src="dist/Img/AboutUsImg1.jpg" style="width: 405px; height: 216px;" />
+        </div>
+    </div>
 </body>
 
 </html>

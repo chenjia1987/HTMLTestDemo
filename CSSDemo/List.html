@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        hr {
+            width: 100%;
+            height: 5px;
+            margin: 50px 0;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ulStyle1">
+        <style>
+            #ulStyle1 ul {
+                max-width: 400px;
+            }
+
+            #ulStyle1 ul li {
+                list-style: none;
+                position: relative;
+                padding: 0 0 0 2em;
+            }
+
+            #ulStyle1 ul li::before {
+                position: absolute;
+                content: '\2022';
+                color: #F00;
+                top: 0;
+                left: 0;
+                text-align: center;
+                font-size: 2em;
+                line-height: .75;
+            }
+        </style>
+        <ul>
+            <li>ThreeMarkets provide access to over 80 live market feeds within the MT4 terminal</li>
+            <li>Use MT4’s market watch to keep up to date with live market pricing</li>
+            <li>Stream live market prices into Excel using MT4’s DDE API </li>
+        </ul>
+    </div>
+
+    <hr />
+
+
+</body>
+
+</html>
