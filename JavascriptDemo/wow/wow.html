@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>wow js</title>
+    <link type="text/css" rel="stylesheet" href="../dist/plugin/animate.css-3.5.1/animate.min.css" />
+</head>
+<body>
+    <div class="wow bounceInLeft" style="width:765px; height:574px; margin-bottom: 10px; background-color: #1daee9;"></div>
+    <div class="wow bounceInRight" style="width:765px; height:574px; margin-bottom: 10px; background-color: #5bd5a0;"></div>
+    <div class="wow bounceIn" style="width:765px; height:574px; margin-bottom: 10px; background-color: #c843a5;"></div>
+    <div class="wow bounceInUp" style="width:765px; height:574px; margin-bottom: 10px; background-color: #ffcc35;"></div>
+    <div class="wow bounceInDown" style="width:765px; height:574px; margin-bottom: 10px; background-color: #eb3980;"></div>
+    <div class="wow slideInUp" style="width:765px; height:574px; margin-bottom: 10px; background-color: #1daee9;"></div>
+    <div class="wow slideInDown" style="width:765px; height:574px; margin-bottom: 10px; background-color: #5bd5a0;"></div>
+    <div class="wow slideInLeft" style="width:765px; height:574px; margin-bottom: 10px; background-color: #c843a5;"></div>
+    <div class="wow slideInRight" style="width:765px; height:574px; margin-bottom: 10px; background-color: #ffcc35;"></div>
+    <div class="wow lightSpeedIn" style="width:765px; height:574px; margin-bottom: 10px; background-color: #eb3980;"></div>
+    <script type="text/javascript" src="../dist/plugin/wow-1.0.1/wow.min.js"></script>
+    <script>
+        if (typeof WOW != 'undefined') {
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            });
+            wow.init();
+        };
+    </script>
+</body>
+
+</html>
