@@ -9,15 +9,40 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        
+        .show-grid [class^="col-"] {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #eee;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid #ddd;
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+        .item{
+            height: 375px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-1 col-xs-1" style="background:#f00;">col-lg-1 col-xs-1</div>
-            <div class="col-lg-11 col-xs-11" style="background:#00f;">col-lg-11 col-xs-11</div>
+        <div class="row show-grid">
+            <div class="col-lg-1 col-xs-1">col-lg-1 col-xs-1</div>
+            <div class="col-lg-11 col-xs-11">col-lg-11 col-xs-11</div>
+        </div>
+
+        <div class="row show-grid">
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
+            <div class="col-lg-4 col-sm-4 item">col-lg-4 col-sm-4</div>
         </div>
     </div>
 </body>
